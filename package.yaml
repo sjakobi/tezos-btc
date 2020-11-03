@@ -70,6 +70,7 @@ executables:
       - fmt
       - lorentz
       - morley
+      - morley-client
       - morley-multisig
       - morley-prelude
       - optparse-applicative
