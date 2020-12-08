@@ -14,7 +14,7 @@ extra-deps:
     https://gitlab.com/morley-framework/morley.git
     # ^ CI cannot use ssh, so we use http clone here
   commit:
-    9c4583f67fc00738b6f2b6701ce56b4c79f3a55f  # master
+    a84c1f0f53f5085302f3595f813c236577bf59c0  # sjakobi/404-expectContractEntrypoints-backport
   subdirs:
     - code/morley-multisig
     - code/morley-client

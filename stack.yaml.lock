@@ -12,11 +12,11 @@ packages:
     pantry-tree:
       size: 1078
       sha256: 93d0cfa94ea37e8dd05f692a07d4348ed8d79fec0fd3cde73443f010d76c213d
-    commit: 9c4583f67fc00738b6f2b6701ce56b4c79f3a55f
+    commit: a84c1f0f53f5085302f3595f813c236577bf59c0
   original:
     subdir: code/morley-multisig
     git: https://gitlab.com/morley-framework/morley.git
-    commit: 9c4583f67fc00738b6f2b6701ce56b4c79f3a55f
+    commit: a84c1f0f53f5085302f3595f813c236577bf59c0
 - completed:
     subdir: code/morley-client
     name: morley-client
@@ -25,11 +25,11 @@ packages:
     pantry-tree:
       size: 2817
       sha256: 7c21cb61e91c527b1286f9a601c800ebd81b425195a4b58b03ca967d0f1203fd
-    commit: 9c4583f67fc00738b6f2b6701ce56b4c79f3a55f
+    commit: a84c1f0f53f5085302f3595f813c236577bf59c0
   original:
     subdir: code/morley-client
     git: https://gitlab.com/morley-framework/morley.git
-    commit: 9c4583f67fc00738b6f2b6701ce56b4c79f3a55f
+    commit: a84c1f0f53f5085302f3595f813c236577bf59c0
 - completed:
     subdir: code/cleveland
     name: cleveland
@@ -37,12 +37,12 @@ packages:
     git: https://gitlab.com/morley-framework/morley.git
     pantry-tree:
       size: 10876
-      sha256: 1c06ae7f70d9270e791086b34148845786cf86a84610a24d69581144645105ee
-    commit: 9c4583f67fc00738b6f2b6701ce56b4c79f3a55f
+      sha256: 9705e9028d88637ab6e08a3980faf9d76bf48058a918ba9c044df4a1df8893ad
+    commit: a84c1f0f53f5085302f3595f813c236577bf59c0
   original:
     subdir: code/cleveland
     git: https://gitlab.com/morley-framework/morley.git
-    commit: 9c4583f67fc00738b6f2b6701ce56b4c79f3a55f
+    commit: a84c1f0f53f5085302f3595f813c236577bf59c0
 - completed:
     subdir: code/morley-ledgers
     name: morley-ledgers

@@ -33,7 +33,7 @@ import Data.Coerce (coerce)
 import qualified Data.Map as M
 import qualified Data.Set as Set
 import qualified Data.Text.IO.Utf8 as Utf8
-import Test.HUnit (Assertion, assertFailure)
+import Test.HUnit (Assertion)
 import Test.Tasty (TestTree, testGroup)
 import Test.Tasty.Hspec (testSpec)
 import Test.Tasty.HUnit (testCase)
@@ -46,10 +46,10 @@ import Lorentz.Contracts.Test.ManagedLedger (OriginationParams(..), originateMan
 import qualified Lorentz.Contracts.Test.ManagedLedger as ML
 import Lorentz.Contracts.Upgradeable.Common (EpwUpgradeParameters(..), emptyPermanentImpl)
 import Lorentz.Test
+import Lorentz.Test.Unit (expectContractEntrypointsMap)
 import Lorentz.UStore.Migration
 import Michelson.Runtime (parseExpandContract)
-import Michelson.Test.Unit (matchContractEntrypoints, mkEntrypointsMap)
-import Michelson.Typed.Convert (convertContract)
+import Michelson.Test.Unit (mkEntrypointsMap)
 import qualified Michelson.Untyped as U
 import Util.Named
 
@@ -162,11 +162,7 @@ test_interface = testGroup "TZBTC consistency test"
   , testCase
       "Has the expected interface of TZBTC contract" $ do
         reference <- entrypointsRef
-        let untypedTzbtc = convertContract . compileLorentzContract $ tzbtcContract
-        case matchContractEntrypoints untypedTzbtc reference of
-          Right _ -> pass
-          Left missing -> do
-            assertFailure $ "Some entrypoints were not found:" <> (show missing)
+        expectContractEntrypointsMap tzbtcContract reference
   ]
 
 test_addOperator :: TestTree
